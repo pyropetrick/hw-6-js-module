@@ -76,3 +76,25 @@ function averageNum(arr) {
 
 }
 averageNum(matrix)
+
+// task 3
+const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4];
+
+function sortNumbers(arr) {
+    if (arr.length <= 1) return arr;
+
+    const sortValue = 0;
+    const negativeList = [];
+    const positiveList = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < sortValue) {
+            negativeList.push(arr[i])
+        }
+        else if (arr[i] >= sortValue) {
+            positiveList.push(arr[i])
+        }
+    }
+    console.log(negativeList, positiveList)
+}
+sortNumbers(mixedNumbers)
