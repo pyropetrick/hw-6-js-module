@@ -69,5 +69,10 @@ const matrix = [
 ]
 
 function averageNum(arr) {
-    
+        const newMatrix = arr.map(sum => {
+            return sum.reduce((previousValue, currentValue) => previousValue + currentValue) / sum.length
+        })
+        console.log(newMatrix)
+
 }
+averageNum(matrix)
