@@ -50,3 +50,24 @@ console.log(binary.join('1'))
 // advanced lvl
 
 // task 1
+// const word = prompt('Введите слово, а мы проверим является ли оно палиндромом')
+const word = 'топот'
+const wordArr = word.split('');
+const wordReverse = wordArr.slice(0, wordArr.length).reverse();
+
+if (wordArr.join() === wordReverse.join()) console.log(`${word} - является палиндромом`)
+else console.log('Это не палиндром')
+
+
+
+// task 2
+const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000],
+]
+
+function averageNum(arr) {
+    
+}
