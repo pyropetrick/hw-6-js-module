@@ -22,7 +22,7 @@ console.log(numbers)
 
 const students = ['Polina', 'Dasha', 'Masha']
 students.splice(0,1, 'Andrew')
-students.splice(students.length - 1, students.length - 1, 'Borya')
+students.splice(students.length - 1, 1, 'Borya')
 console.log(students)
 
 // task 5
@@ -95,6 +95,26 @@ function sortNumbers(arr) {
             positiveList.push(arr[i])
         }
     }
-    console.log(negativeList, positiveList)
+    console.log(negativeList.sort((a, b) => {
+        return a - b;
+    }), positiveList.sort((a, b) => {
+        return a - b;
+    }))
 }
 sortNumbers(mixedNumbers)
+
+// task 4
+const randomNumbers = [];
+
+function getRandomNum(arr) {
+    for (let i = 0; i < 5; i++) {
+        let rand = Math.floor(Math.random() * 100);
+        arr.push(rand);
+    }
+}
+getRandomNum(randomNumbers);
+
+
+const randomNumCube = randomNumbers.map((item) => Math.pow(item, 3))
+
+console.log(randomNumCube, randomNumbers)
